@@ -53,7 +53,9 @@ public class BrokenLinks {
 		
 		HttpURLConnection httpconnect = (HttpURLConnection) link.openConnection();
 		httpconnect.connect();
-		if(httpconnect.getResponseCode()==404) {
+		if(httpconnect.getResponseCode()==404) 
+		{
+			
 			System.out.println("Result =" + Urllink +" "+ httpconnect.getResponseMessage());
 		}
 		
