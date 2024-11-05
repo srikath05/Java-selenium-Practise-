@@ -12,9 +12,10 @@ public class ArrayStrings {
 		
 	
 		String currentnames = Names[i];
-		System.out.println(Names[i]);
-	    System.out.println(currentnames.charAt(0));
+		//System.out.println(Names[i]);
+	   System.out.println(currentnames.charAt(0));
 		System.out.println(currentnames.charAt(currentnames.length()-1));
+	//    System.out.println(Names[i].charAt(Names[i].length()-1));
 		
 	}
 }

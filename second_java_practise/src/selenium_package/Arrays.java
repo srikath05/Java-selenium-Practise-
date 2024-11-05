@@ -7,7 +7,7 @@ public class Arrays {
 	public static void main(String[] args) {
 				  
 		// TODO Auto-generated method stub
-		//String[] citie = {"hyd","Amr","wgl","del"};
+		//String[] citie = {"hyd","Amr","wgl","del"}; 
 	/*	Scanner sc=new Scanner(System.in);
 		System.out.println("enter city name");
 		String[] cities=new String[4];

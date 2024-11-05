@@ -10,11 +10,11 @@ public class SingletonObject {
 		    private SingletonObject() {}
 
 		    // Synchronized method to ensure thread safety
-		    public static synchronized SingletonObject getInstance() {
+		    public static  SingletonObject getInstance() {
 		        if (instance == null) {
 		            instance = new SingletonObject();
 		        }
-		        return instance;
+		        return instance; 
 		    }
 		}
 	

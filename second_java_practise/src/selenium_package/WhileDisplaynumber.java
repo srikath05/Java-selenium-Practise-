@@ -6,7 +6,7 @@ public class WhileDisplaynumber {
 		// TODO Auto-generated method stub
 
 		
-		int a=2;
+		int a=0;
 		
 		while(a<=10)
 		{ if(a%2==0) {

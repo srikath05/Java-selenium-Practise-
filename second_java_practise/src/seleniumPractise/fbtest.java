@@ -1,12 +1,16 @@
 package seleniumPractise;
 
+import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 
 public class fbtest {
 
@@ -17,7 +21,7 @@ public class fbtest {
 		// System.setProperty("webdriver.chrome.driver", "C:\\Users\\ganji\\OneDrive\\Desktop\\ChromeDriver\\chromedriver.exe");
 		ChromeDriver driver=new ChromeDriver();
 		driver.get("https://www.facebook.com/");
-		driver.manage().window().maximize();
+		driver.manage().window().maximize(); 
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		
 		
@@ -34,7 +38,12 @@ public class fbtest {
 		driver.findElement(By.xpath("//input[@value='2']")).click();
 		driver.findElement(By.xpath("//button[@name='websubmit']")).click();
 		
-		
+
+		 FluentWait<ChromeDriver> wait = new FluentWait<>(driver)
+	                .withTimeout(Duration.ofSeconds(30))        // Maximum wait time
+	                .pollingEvery(Duration.ofSeconds(5))        // Poll every 5 seconds
+	                .ignoring(Exception.class);
+		 
 		/*Select day_sel=new Select(driver.findElement(By.id("day")));
 		day_sel.selectByVisibleText("23");
 		

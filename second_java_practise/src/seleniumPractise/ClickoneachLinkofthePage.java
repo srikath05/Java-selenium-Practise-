@@ -19,36 +19,37 @@ public class ClickoneachLinkofthePage {
 		
          driver = new ChromeDriver();
         
-     
+      
             // Navigate to the desired web page
             driver.get("https://www.amazon.in/"); 
             
             // Find all links on the page
             List<WebElement> links = driver.findElements(By.tagName("a"));
     		
-            
-            // Initialize WebDriverWait
+           System.out.println("links in the page are = " + links.size());
+            // Initialize WebDriverWait 
           WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
           
           for(int i =0; i<links.size(); i++) {
         	  
         	  WebElement link = links.get(i);
+        	  System.out.println("all Links are =" + links.get(i));
+        	 System.out.println("Herf links = " + link.getAttribute("href"));
         	  try {
-        		  link.click();
-            	  
-            	  wait.until(ExpectedConditions.titleContains("Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in"));
+        		  	link.click();
+            	   //wait.until(ExpectedConditions.titleContains("Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in"));
         	  
         	  driver.navigate().back();
         	  
         	  links = driver.findElements(By.tagName("a"));
         	  }
         	  catch (Exception e) {
-        		  System.out.println("error cliks link"+ e.getMessage());
+        		 System.out.println("error cliks link = "+ e.getMessage());
         		  
         	  }
         	 
           }
-          
+          driver.quit();
        
 	}
 	

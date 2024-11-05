@@ -16,6 +16,6 @@ public class Firstdaypractise {
 		//driver.findElement(By.name("jazoest")).click();
 		
 
-	}
+	} 
 
 }

@@ -1,21 +1,26 @@
 package seleniumPractise;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 public class TestHrm {
 //
 	public static void main(String[] args) {
 		
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\ganji\\OneDrive\\Desktop\\ChromeDriver\\chromedriver.exe");
-	ChromeDriver driver=new ChromeDriver();
+	WebDriver  driver=new ChromeDriver();
 	driver.get("http://www.testingmasters.com/hrm");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -62,7 +67,10 @@ public class TestHrm {
 	int rows=rowscount.size();
 	System.out.println("rows :"+rows);
 	
-	
+	FluentWait<WebDriver> fluentWait = new FluentWait<>(driver)
+	            .withTimeout(Duration.ofSeconds(30))  // Maximum wait time
+	            .pollingEvery(Duration.ofSeconds(5))  // Check every 5 seconds
+	            .ignoring(NoSuchElementException.class);  // Ignore this exception
 
 	}
 

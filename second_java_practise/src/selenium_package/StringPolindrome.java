@@ -4,39 +4,6 @@ import java.util.Scanner;
 
 public class StringPolindrome {
 
-	//public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	//	String str="madam";
-		//String str;
-		// String rev=" ";
-//		Scanner sc=new Scanner(System.in);
-//		str=sc.nextLine();
-				
-		/*
-		 * int length = str.length(); for(int i=length - 1;i>=0; i--) {
-		 * 
-		 * 
-		 * rev=rev+str.charAt(i); System.out.println(rev);
-		 * 
-		 * if(str.equals(rev)) { System.out.println(str+" polindrome"); }else
-		 * System.out.println(str+" not polindrome"); }
-		 */
-		
-		//String str="madam", rev = "";
-	  /*    Scanner sc = new Scanner(System.in);
-			
-			 System.out.println("Enter a string:"); 
-			 str = sc.nextLine(); ////
-			   int length = str.length(); 
-			   for ( int i = length - 1; i >= 0; i-- )
-			  rev = rev + str.charAt(i); 
-			   if (str.equals(rev)) 
-			  System.out.println(str+" is a palindrome");
-			   else
-			  System.out.println(str+" is not a palindrome");
-	
-}*/
 	
 	public static void main(String[] args)
     {
@@ -49,11 +16,10 @@ public class StringPolindrome {
        boolean A = isPalindrome(str);
         System.out.println(A);
     }
-			 		
-			   public static boolean isPalindrome(String str)
-			    {
-			        // Initializing an empty string to store the reverse
-			        // of the original str
+	public static boolean isPalindrome(String str) {
+			       
+		// Initializing an empty string to store the reverse
+		// of the original string
 			        String rev = "";
 
 			        // Initializing a new boolean variable for the

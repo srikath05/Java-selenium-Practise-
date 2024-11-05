@@ -5,82 +5,82 @@ import java.util.Scanner;
 public class StringMethods {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Replace
-		/*String str=("Testing Master Technologies");
+		 // TODO Auto-generated method stub
+		// Replace
+		 String str=("Testing Master Technologies");
 		str=str.replace("Testing", "Quality");
-		System.out.println(str);*/
+		System.out.println("Replace " + str); 
 		
-		//Split
-		/*String str=("Testing Master Technologies");
-		String[] arr=str.split("s");
+		// Split
+		 String str1=("Testing Master Technologies");
+		String[] arr=str1.split("s");
 		System.out.println(arr.length);
 		 for(int i=0;i<0;i++)
 		 
 			System.out.println(arr[i]);
 		
 		for(String s:arr)
-		System.out.println(s);
+		System.out.println("Split " + s);
 	
-		*/
-		//string contains
-		/*String str=("Testing Master Technologies");
-		if(str.contains("Master"))
+		 
+		// string contains
+		 String str2=("Testing Master Technologies");
+		if(str2.contains("Master"))
 		{
-		System.out.println("exit");	
+		System.out.println("contains " + "exit");	
 		}
 		else
 		{
-			System.out.println("not exit");
-		}*/
-		/*
-		//substring 
+			System.out.println( "contains " + "not exit");
+		} 
+		 
+		 //substring 
 		
-		String str=("Testing Masters Technologies");
-		String s=str.substring(8, 14);
-		System.out.println(s);
-		*/
+		String str3=("Testing Masters Technologies");
+		String s=str3.substring(8, 14);
+		System.out.println("substring " + s);
+		 
 		
-		//ContantEquals	
-		/*String str1="Srikanth";
-		String str2="srikanth";*/
+		// ContantEquals	
+		 String str4="Srikanth";
+		String str5="srikanth"; 
 		
-		//if(str1.contentEquals(str2))
-/*			if(str1.equalsIgnoreCase(str2))	//equalsIgnorecase
+		 if(str4.contentEquals(str5))
+ 			if(str4.equalsIgnoreCase(str5))	
 		{
-			System.out.println("Both are same");
+			System.out.println("ContantEquals " + "Both are same");
 		}
 		else
 		{
-			System.err.println("not same");
-		}*/
-			//charArt
+			System.err.println("ContantEquals " + "not same");
+		} 
+			// charArt
 		
-/*		String str1="srikanth";
+ 		String str6="srikanth";
 		
-			for(int i=0;i<=str1.length();i++)
+			for(int i=0;i<=str6.length();i++)
 			
 						
 		{
-			char c=str1.charAt(i);
+			char c=str6.charAt(i);
 							
 			
-		System.out.print(c);
-		}*/
-		//Converting
-	/*String h="hyderabad";	//"HYDERABAD";
-	System.out.println(h.toLowerCase());
-	System.out.println(h.toUpperCase());*/
+		System.out.print("charArt" +  c);
+		} 
+		 //Converting
+	 String h="hyderabad";	// "HYDERABAD";
+	System.out.println("Converting " + h.toLowerCase());
+	System.out.println("Converting " + h.toUpperCase()); 
 		
-		//TRIM
-	/*	String str="  Testing Master  ";
-		str=str.trim();
-		System.out.println(str);*/
+		// TRIM
+	 	String str7="  Testing Master  ";
+		str7=str7.trim();
+		System.out.println("TRIM " + str7); 
 		
-		//Index
-		/*String str="Testing Master";
-		 int index=str.indexOf(6);
-		 System.out.println(index);*/
+		// Index
+		 String str8="Testing Master";
+		 int index=str8.indexOf(6);
+		 System.out.println("Index " + index); 
 		
 		
 		
