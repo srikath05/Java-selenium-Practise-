@@ -1,4 +1,4 @@
-package selenium_package;
+package seleniumPractise;
 
 import java.io.File;
 import java.io.FileInputStream;

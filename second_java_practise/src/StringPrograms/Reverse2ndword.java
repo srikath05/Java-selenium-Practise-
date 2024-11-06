@@ -1,4 +1,4 @@
-package selenium_package;
+package StringPrograms;
 
 import java.lang.reflect.Array;
 

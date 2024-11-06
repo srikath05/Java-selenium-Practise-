@@ -10,15 +10,6 @@ public class HigestNumber {
 		int b=900;
 		int c=900;
 		
-		/*if((a>b)&&(a>c))
-			System.out.println("a is greater");
-		else if((b>a)&&(b>c))
-		System.out.println("b is greater");
-		
-		else if((c>a)&&(c>b))
-				System.out.println("c is greater");
-		else 
-			System.out.println(" two or more value are same");*/
 		
 		try {
 		if((a>b)&&(a>c))

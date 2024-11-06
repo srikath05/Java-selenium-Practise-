@@ -1,4 +1,4 @@
-package selenium_package;
+package StringPrograms;
 
 public class Alphabets {
 

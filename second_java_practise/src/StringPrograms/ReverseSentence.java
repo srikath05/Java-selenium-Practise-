@@ -1,10 +1,10 @@
-package selenium_package;
+package StringPrograms;
 
 public class ReverseSentence {
 
 		 public static String reverseString(String input) {
 			   String[] words = input.split(" ");  // Split the input string into words
-		        String reversedSentence = "";  // Initialize an empty string for the reversed sentence
+		        String result = "";  // Initialize an empty string for the reversed sentence
 
 		        // Loop through each word
 		        for (int j = 0; j < words.length; j++) {
@@ -16,15 +16,11 @@ public class ReverseSentence {
 		                reversedWord += word.charAt(i);  // Append each character in reverse order
 		            }
 
-		            reversedSentence += reversedWord;  // Add the reversed word to the sentence
+		            result += reversedWord + " ";  // Add the reversed word to the sentence
 
-		            // Add a space between words except after the last one
-		            if (j < words.length - 1) {
-		                reversedSentence += " ";
-		            }
-		        }
+		              }
 
-		        return reversedSentence;  // Return the complete reversed sentence
+		        return result;  // Return the complete reversed sentence
 		    }
 
 

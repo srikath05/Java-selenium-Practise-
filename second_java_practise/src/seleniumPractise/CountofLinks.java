@@ -1,4 +1,4 @@
-package selenium_package;
+package seleniumPractise;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import dev.failsafe.Timeout;
-import seleniumPractise.webelement;
 
 public class CountofLinks {
 
@@ -24,9 +23,7 @@ public class CountofLinks {
 		
 		System.out.println("Title = "+driver.getTitle());
 		List<WebElement> links = driver.findElements(By.tagName("a")) ;
-		
-		
-		
+			
 		int countoflinks = links.size();
 		
 		System.out.println("count of Links on the page" + " " + countoflinks);

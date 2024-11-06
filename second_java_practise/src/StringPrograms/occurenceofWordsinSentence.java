@@ -1,4 +1,4 @@
-package selenium_package;
+package StringPrograms;
 
 import java.util.Arrays;
 import java.util.HashMap;

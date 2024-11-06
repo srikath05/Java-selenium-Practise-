@@ -1,4 +1,4 @@
-package selenium_package;
+package seleniumPractise;
 
 import javax.swing.JOptionPane;
 

@@ -34,8 +34,6 @@ public class Removingduplicatesfromarraylistusinghashet {
 
 	}
 
-
-
 	public static List getDataFromDB() {
 		
 		

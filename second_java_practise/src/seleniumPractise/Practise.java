@@ -29,52 +29,27 @@ public class Practise {
 	 static WebDriver driver;
 	 public static void main(String[] args) throws IOException, InterruptedException {
 		 
-		 
+		
+		 int[] repetedNums = {1, 2, 3, 2, 4, 5, 3, 6, 7, 5, 8};
+
+	        // Traverse the array and print unique elements
+	        for (int i = 0; i < repetedNums.length; i++) {
+	            boolean isDuplicate = false;
+	            
+	            // Check if current element has appeared before
+	            for (int j = 0; j < i; j++) {
+	                if (repetedNums[i] == repetedNums[j]) {
+	                    isDuplicate = true;
+	                    break;
+	                }
+	            }
+	            
+	            // If it's not a duplicate, print it
+	            if (!isDuplicate) {
+	                System.out.println(repetedNums[i]);
+	            }
+	        }
 	 }
-	 public void clickButtonInDynamicTable(WebDriver driver, String buttonName) {
-		    try {
-		  
-		 // Locate the web table body
-		  WebElement tableBody = driver.findElement(By.xpath("//table/tbody"));
-		 
-		 // Find all rows in the table body
-		 List<WebElement> rows = tableBody.findElements(By.tagName("tr"));
-		 
-		 // Iterate through each row
-		 for (int rowIndex = 0; rowIndex < rows.size(); rowIndex++) {
-		 WebElement row = rows.get(rowIndex);
-		            
-		 // Find all cells in the current row
-		 List<WebElement> cells = row.findElements(By.tagName("td"));
-		 
-		 // Iterate through each cell
-		 for (int colIndex = 0; colIndex < cells.size(); colIndex++) {
-		 WebElement cell = cells.get(colIndex);
-		                
-		 // Check if the cell contains the button name
-		 if (cell.getText().contains(buttonName)) {
-		 
-		// Find and click the button in the current row
-		 WebElement button = row.findElement(By.xpath(".//button[text()='" + buttonName + "']"));
-		                    
-		// Print the row and column index
-		 
-		System.out.println("Button with name '" + buttonName + "' found at row: " + (rowIndex + 1) + ", column: " + (colIndex + 1));
-		                    
-		  // Click the button
-		  button.click();
-		 
-		  // Exit after clicking the button
-		                    return;
-		                }
-		            }
-		        }
-		 
-		        System.out.println("Button with name '" + buttonName + "' not found in the table.");
-		    } catch (NoSuchElementException e) {
-		        System.out.println("Exception: " + e.getMessage());
-		    }
-		}
 		 
 }
 
