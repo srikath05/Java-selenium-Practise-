@@ -7,15 +7,15 @@ public class Swaping2nos {
 
 		int x=10;
 		int y=20;
-		int z = 0;
-		z = x;
-		x= y;
-		y= z;
-		System.out.println("x = "+x +" y =  "+y);
+//		int z = 0;
+//		z = x;
+//		x= y;
+//		y= z;
+//		System.out.println("x = "+x +" y =  "+y);
 		
-//		 x=x+y;
-//		 y=x-y;
-//		 x=x-y;
+		 x=x+y;
+		 y=x-y;
+		 x=x-y;
 		System.out.println("x = "+x +" y =  "+y);
 		
 	}

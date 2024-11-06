@@ -12,10 +12,10 @@ public class MultiplesofAnyNumber {
 		int n=sri.nextInt();
 		System.out.println("multiples of "+ n + " are");
 				
-		for(int j=1;j<=20;j++)
+		for(int j=1;j<=10;j++)
 		
 			{
-			System.out.println(n*j);
+			System.out.println(n +" * " + j +"= "+n*j);
 			}
 	}
 

@@ -2,8 +2,7 @@ package selenium_package;
 
 import selenium_package.Add;
 import selenium_package.Sub;
-import selenium_package.Mul;
-import selenium_package.Printer;
+
 public class MethodscallingandReturn {
 
 	public static void main(String[] args) {

@@ -16,7 +16,7 @@ public class clgstudnfo extends studetails{
 		return stuname;
 	}
 	
-	public void print()
+	public void print() 
 	{
 		System.out.println("roll "+roll+", "+"clgname "+clgname+", "+"clgaddress "+clgaddress+", "+"dept "+depts+"Stuname "+stuname+", "+"labs "+ labs);
 	}

@@ -19,7 +19,7 @@ public class Cricbuz extends Practise{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-//		 try {	
+//		 try {	 
 //		int sum = 0;
 //
 //		System.setProperty("Webdriver.chrome.driver", "F:\\chromedriver.exe");
@@ -71,7 +71,7 @@ public class Cricbuz extends Practise{
 		  System.out.println(TotalSumValue);
 
 
-		  String ActualTotal=driver.findElement(By.xpath("//div[text()='Total']/following-sibling::div")).getText();
+		  String ActualTotal=driver.findElement(By.xpath("//div[text()='Total']/following-sibling::div ")).getText();
 		  int ActualTotalVAlue=Integer.parseInt(ActualTotal);
 		  if(ActualTotalVAlue==TotalSumValue)
 		  {
@@ -95,7 +95,7 @@ public class Cricbuz extends Practise{
 			}
 				
 
-driver.close();
+//driver.close();
 	}
 
 }

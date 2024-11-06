@@ -7,16 +7,14 @@ public class Primenumber {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Factorialnumber fc=new Factorialnumber();
-		fc.main(null);
 		Scanner sri=new Scanner(System.in);
-		System.out.println("enter value m");
-		int m=sri.nextInt();
+		System.out.println("enter value N");
+		int N=sri.nextInt();
 		//int counter=0;
 		int i=1;
 		i++;
 		{
-			if(m%i!=0)
+			if(N % i != 0)
 			{
 				System.out.println("prime no.");
 			}
@@ -26,7 +24,11 @@ public class Primenumber {
 			}
 			
 		}
-			
+//		System.out.println("prime numbers between 1 to 20 are : ");
+//			for(int j=2;j<=20;j++) {
+//				if(isPrime(j));
+//				System.out.print(j + " ");
+//			}
 			
 /*		{
 			if(n%i==0)
@@ -46,7 +48,17 @@ public class Primenumber {
 	
 	}
 	
-}
 
+//
+//	public static boolean isPrime(int num) {
+//		
+//		for( int i =2; i<num; i++) {
+//			if(num%i==0) {
+//				return false;
+//			}
+//		}return true;
+//		
+//	}
 
 	
+}

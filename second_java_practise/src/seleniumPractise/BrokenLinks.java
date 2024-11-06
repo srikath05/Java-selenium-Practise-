@@ -1,19 +1,14 @@
 package seleniumPractise;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.file.Files;
+import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.io.FileHandler;
 
 public class BrokenLinks {
 		static WebDriver driver;
@@ -25,17 +20,18 @@ public class BrokenLinks {
 	   
 		driver.get("https://www.amazon.in/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(6000,TimeUnit.MILLISECONDS );
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		
 		TakeScreenshot.takeScreenshot(driver, "C:\\Users\\ganji\\OneDrive\\Desktop\\Takescreenshot\\");
 		
 		List <WebElement> Links = driver.findElements(By.tagName("a"));
 		
-	
+	 
 		for(int i=0; i<Links.size();i++)
 		{			
 			WebElement ele = Links.get(i);
+			
 			String Urllink = ele.getAttribute("href");
 			try {
 				VerifyLink(Urllink);
@@ -53,11 +49,11 @@ public class BrokenLinks {
 		
 		HttpURLConnection httpconnect = (HttpURLConnection) link.openConnection();
 		httpconnect.connect();
-		if(httpconnect.getResponseCode()==404) 
-		{
-			
-			System.out.println("Result =" + Urllink +" "+ httpconnect.getResponseMessage());
-		}
+	      if (httpconnect.getResponseCode() == 200) {
+	            System.out.println(Urllink + " is valid.");
+	        } else {
+	            System.out.println(Urllink + " is broken. HTTP Response Code: " + httpconnect.getResponseCode() + " " + httpconnect.getResponseMessage());
+	        }
 		
 		
 	}
