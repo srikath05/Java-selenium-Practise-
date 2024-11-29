@@ -20,7 +20,7 @@ public class fbtest {
 		
 		// System.setProperty("webdriver.chrome.driver", "C:\\Users\\ganji\\OneDrive\\Desktop\\ChromeDriver\\chromedriver.exe");
 		ChromeDriver driver=new ChromeDriver();
-		driver.get("https://www.facebook.com/");
+		driver.get("https://username:password@www.flipkart.com/");
 		driver.manage().window().maximize(); 
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		

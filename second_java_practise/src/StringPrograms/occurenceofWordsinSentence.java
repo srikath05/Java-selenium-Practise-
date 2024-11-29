@@ -10,6 +10,7 @@ public class occurenceofWordsinSentence {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	    List<String> items = Arrays.asList("apple", "banana", "apple", "orange", "banana", "apple");
+	    	
         Map<String, Integer> occurrenceMap = new HashMap<>();
 
         // Simple for loop to count element occurrences in the list
@@ -27,3 +28,4 @@ public class occurenceofWordsinSentence {
 	}
 
 }
+
