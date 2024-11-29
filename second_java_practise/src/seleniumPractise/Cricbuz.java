@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class Cricbuz extends Practise{
+public class Cricbuz{
 
 	
 
