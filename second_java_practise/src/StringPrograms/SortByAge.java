@@ -17,6 +17,7 @@ public class SortByAge {
         
         // Sort the list by age using a comparator 
         people.sort(Comparator.comparingInt(p -> p.age));
+        
 
         // Print the sorted list
         for (Person person : people) {
