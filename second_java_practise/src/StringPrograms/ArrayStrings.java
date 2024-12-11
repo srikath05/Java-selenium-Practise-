@@ -13,10 +13,9 @@ public class ArrayStrings {
 		String currentnames = Names[i];
 		System.out.println(Names[i]);
 	    System.out.println(currentnames.charAt(0));//1st letter of words
-		System.out.println(currentnames.charAt(currentnames.length()-1));
-	    System.out.println(Names[i].charAt(Names[i].length()-1));
+		System.out.println(currentnames.charAt(currentnames.length()-1));//last letter of the words
+	    System.out.println(Names[i].charAt(Names[i].length()-1));//last letter of the words
 		
 	}
-}
-
+  }
 }
