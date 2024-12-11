@@ -14,10 +14,13 @@ public class RemoveDuplicatesIntegers {
 
 		        // Convert array to List
 		        List<Integer> list = new ArrayList<>();
-		        for (int num : arr) {
-		            list.add(num);
-		        }
+//		        for (int num : arr) {
+//		            list.add(num);
+//		        }
 
+		        for (int i = 0; i < arr.length; i++) {
+		            list.add(arr[i]);
+		        }
 		        // Use a Set to remove duplicates
 		        Set<Integer> set = new HashSet<>(list);
 

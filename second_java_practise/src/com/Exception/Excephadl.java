@@ -8,7 +8,7 @@ public class Excephadl {
 		int z=0;
 		try {
 			 z=M5();
-			 System.out.println("z iss : "+z);
+			 System.out.println("z iss  : "+z);
 		}
 			catch(Exception e) {
 				System.out.println("Exception is : "+e);

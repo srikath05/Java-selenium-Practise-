@@ -30,13 +30,22 @@ public class UploadingFile {
 			driver.switchTo().newWindow(WindowType.WINDOW);
 	
 		  
-		
+			WebElement element = driver.findElement(By.xpath("//a[text()='Click here to practice iframe and nested iframe scenarios.']"));
 			Actions action = new Actions(driver);
+			
+			action.moveToElement(element).perform();
 		
 		//	action.keyDown(Keys.SHIFT).sendKeys("qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").perform();
 			
-			WebElement element = driver.findElement(By.xpath("//a[text()='Click here to practice iframe and nested iframe scenarios.']"));
-					action.dragAndDropBy(element, 30,0).perform();
+			
+			action.dragAndDropBy(element, 30,0).perform();
+			action.contextClick(element).perform();
+			action.clickAndHold(element).moveToElement(element).release(element).build();
+			action.dragAndDrop(element, element);
+	        WebElement hiddenElement = driver.findElement(By.id("hiddenElementID"));
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].clicl();", hiddenElement);
 			
 	}
 
