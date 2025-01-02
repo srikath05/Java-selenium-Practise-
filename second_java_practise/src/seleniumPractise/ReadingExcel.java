@@ -32,14 +32,46 @@ public class ReadingExcel {
         //creating a Sheet object
         XSSFSheet sheet=wb.getSheet("Sheet1");
         
-     for(int i=0; i<=sheet.getLastRowNum();i++) {
+for(int i=0; i<=sheet.getLastRowNum();i++) {
     	 System.out.println("Row" + i + " data : ");
     	 for(int j=0;j<sheet.getRow(i).getLastCellNum();j++)
     		 System.out.print(sheet.getRow(i).getCell(j) + "= ");
     	   	 System.out.println();
-    }
+    	   		 }
+    	   	 
      wb.close();
      inputStream.close();
+//     
+//     String excelFilePath = "path_to_your_excel_file.xlsx"; // Replace with your file path
+//     String roleToSearch = "tl"; // Replace with the role you want to search
+//
+//     try (FileInputStream file = new FileInputStream(new File(excelFilePath));
+//          Workbook workbook = new XSSFWorkbook(file)) {
+//
+//         // Get the first sheet
+//         Sheet sheet = workbook.getSheetAt(0);
+//
+//         // Iterate through rows
+//         for (Row row : sheet) {
+//             Cell roleCell = row.getCell(0); // Role column
+//             if (roleCell != null && roleCell.getStringCellValue().equalsIgnoreCase(roleToSearch)) {
+//                 // Fetch User ID and Password
+//                 String userId = row.getCell(1).getStringCellValue(); // User ID column
+//                 String password = row.getCell(2).getStringCellValue(); // Password column
+//
+//                 // Print the result
+//                 System.out.println("Role: " + roleToSearch);
+//                 System.out.println("User ID: " + userId);
+//                 System.out.println("Password: " + password);
+//                 return;
+//             }
+//         }
+//
+//         System.out.println("Role not found: " + roleToSearch);
+//     } catch (IOException e) {
+//         e.printStackTrace();
+//     }
+     
 }
 }
 

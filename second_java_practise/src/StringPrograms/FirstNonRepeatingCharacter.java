@@ -21,12 +21,14 @@ public class FirstNonRepeatingCharacter {
     
     String input1 = "aabccffed";
 
-    System.out.print("Non-repeating characters: ");
+    System.out.print("Non-repeating characters1: ");
+    
     for (int j = 0; j< input1.length(); j++) {
         char ch = input1.charAt(j);
         // Check if the character appears only once in the string
         if (input1.indexOf(ch) == input1.lastIndexOf(ch)) {
-            System.out.print(ch + " "); // Print the non-repeating character
+            System.out.print(ch + " ");
+            // Print the non-repeating character
         }
     }
 
