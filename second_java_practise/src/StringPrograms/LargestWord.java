@@ -3,7 +3,7 @@ package StringPrograms;
 public class LargestWord {  
  public static void main(String[] args) {
 		 
-	 String[] Names = {"Srikanth", "Rickyganji", "Hamsini"};
+	 String[] Names = {"Srikanth", "Rickyganji", "SriHamsiniganji"};
 	 
 	 String largest ="";
 	 
@@ -12,8 +12,8 @@ public class LargestWord {
 		 if(Names[i].length()>largest.length()) {
 			 largest = Names[i];
 		 }
-	 }
-			System.out.println(largest);
+	 }System.out.println(largest);
+			
 	 }
 }
 

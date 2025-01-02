@@ -30,16 +30,19 @@ public class RemoveDuplicatesIntegers {
 		        // Print the result
 		        System.out.println("List without duplicates: " + uniqueList);
 		        
-//		        int[] arr = {1, 1, 2, 3, 3, 4, 5, 5};
-//
-//		        System.out.print("Duplicate elements: ");
-//		        for (int i = 0; i < arr.length; i++) {
-//		            for (int j = i + 1; j < arr.length; j++) {
-//		                if (arr[i] == arr[j]) {
-//		                    System.out.print(arr[i] + " ");
-//		                    break; // Skip further checks for this duplicate
-//		                }
-		    }
-}
+		        // print only duplicate elements 
+		        int[] arr1 = {1, 1, 2, 3, 3, 4, 5, 5};
+
+		        System.out.print("Duplicate elements: ");
+		        for (int i = 0; i < arr1.length; i++) {
+		            for (int j = i + 1; j < arr.length; j++) {
+		                if (arr1[i] == arr1[j]) {
+		                    System.out.print(arr1[i] + " ");
+		                    break; // Skip further checks for this duplicate
+		                }
+		            }
+		        }
+		   }
+	}
 
   

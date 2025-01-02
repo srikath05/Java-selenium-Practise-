@@ -6,29 +6,26 @@ public class VowelsandConsonats {
 		// TODO Auto-generated method stub
 		
 	
-			 String str = "Hello World";
-//			 VowelConsonantCount(str);
-//			 }
-//	static void VowelConsonantCount(String str) {
-	    int vowels = 0, consonants = 0;
-	    str = str.toLowerCase();
+				String str = "HelloWorldHieveryone";
+				str = str.toLowerCase();
+				String result ="";
+				int vowels =0,consonats =0;
+				
+				  
+				    for (int i = 0; i < str.length(); i++) {
+				        char c = str.charAt(i);
 
-	    for (int i = 0; i < str.length(); i++) {
-	        char c = str.charAt(i);
-
-	  
-	            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-	                vowels++;
-	            } else {
-	                consonants++;
-	            }
-	        
-	    }
-
-	    System.out.println("Vowels: " + vowels);
-	    System.out.println("Consonants: " + consonants);
-	
-
+				  
+				            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+				                vowels++;
+				                result +="$";
+				            } else {
+				                consonats++;
+				                result +=c;
+				            }
+				        
+				    }
+				System.out.println(str +" = " + result);
+				System.out.println("vowels = " + vowels + "," + "consonats = " + consonats);
+			}
 	}
-
-}

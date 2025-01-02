@@ -13,10 +13,10 @@ public class Scrolling {
 		
 	// System.setProperty("webdriver.chrome.driver", "F:\\chromedriver.exe");
 		ChromeOptions option = new ChromeOptions();
-		option.addArguments("--headless");
+		option.addArguments("start-maximized");
 		ChromeDriver driver=new ChromeDriver(option);
 		driver.get("http://www.seleniumhq.org/");
-		driver.manage().window().maximize();
+		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		

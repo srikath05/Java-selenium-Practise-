@@ -25,7 +25,7 @@ public class Alphabets {
 		                output += c; // Concatenate the character to the output
 		            }
 		        }
-		      
+		      System.out.println(output);
 		    }
 		
 	}
