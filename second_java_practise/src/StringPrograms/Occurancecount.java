@@ -28,7 +28,6 @@ public class Occurancecount {
 	                occurrenceMap.put(ch, 1);
 	            }
 	        }
-
 	        // Print the result
 	        System.out.println(occurrenceMap);
 			

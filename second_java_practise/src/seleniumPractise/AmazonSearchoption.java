@@ -29,7 +29,7 @@ public class AmazonSearchoption {
 		        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		        // Search for "Mobile"
 		        WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox")));
-		        WebElement searchs = wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox")));
+		       // WebElement searchs = wait.until(ExpectedConditions.elementToBeClickable(By.id("twotabsearchtextbox")));
 		         
 		        search.sendKeys("Mobile");
 		        driver.findElement(By.id("nav-search-submit-button")).click();
@@ -45,7 +45,16 @@ public class AmazonSearchoption {
 		        for (int i = 0; i < productNames.size(); i++) 
 		          {
 		            String name = productNames.get(i).getText();
-		            String price = (i < productPrices.size()) ? productPrices.get(i).getText() : "Price not available";
+		            
+		          //  String price = (i < productPrices.size()) ? productPrices.get(i).getText() : "Price not available";
+		            
+		            String price;
+		            if (i < productPrices.size()) {
+		                price = productPrices.get(i).getText();
+		            } else {
+		                price = "Price not available";
+		            }
+		            
 		            System.out.println("Product Name: " + name );
 		            System.out.println(" Price: " + price);
 		          }  	

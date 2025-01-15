@@ -34,30 +34,17 @@ public class ReverseNumber {
 			System.out.println("not polyndrome "+rev);
 		}*/
 		
-		//int div=123;
-		Scanner obj =new Scanner(System.in);
-		System.out.println("enter value for n:");
-		int n=obj.nextInt();
-		// int n = 12345; // Input number to be reversed
-	        int rev = 0;   // Variable to store the reversed number
-	        
-	        // Loop continues until the number `n` becomes 0
-	        while (n > 0) {
-	            // Step 1: Get the last digit of the number using the modulus operator
-	            int rem = n % 10;
-	            
-	            // Step 2: Build the reversed number
-	            // Multiply the current reversed number by 10 to shift digits to the left,
-	            // then add the extracted digit (rem)
-	            rev = rev * 10 + rem;
-	            
-	            // Step 3: Remove the last digit from the number
-	            // Divide the number `n` by 10 to eliminate the last digit
-	            n = n / 10;
+		  int number = 12345;  // Input number
+	        int reversed = 0;
+
+	        // Loop to reverse the digits of the number
+	        while (number != 0) {
+	            int digit = number % 10;      // Extract the last digit
+	            reversed = reversed * 10 + digit;  // Append the digit to the reversed number
+	            number = number / 10;        // Remove the last digit from the number
 	        }
-	        
-	        // Print the reversed number
-	        System.out.println(rev); // Output: 54321
+
+	        System.out.println("Reversed number: " + reversed);
 		}
 	
 	public static  void removechar(String str) {
