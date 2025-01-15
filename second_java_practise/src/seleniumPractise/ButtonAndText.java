@@ -22,7 +22,7 @@ static WebDriver driver;
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         // Open the target website
-        driver.get("https://www.amazon.com");
+        driver.get("https://www.amazon.in");
         Thread.sleep(10);
 
         // Click all buttons on the page

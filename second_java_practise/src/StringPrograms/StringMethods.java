@@ -12,6 +12,7 @@ public class StringMethods {
 		System.out.println("Replace " + str); 
 		
 		// Split
+		System.out.println("split : ");
 		 String str1=("Testing Master Technologies");
 		String[] arr=str1.split("s");
 		System.out.println(arr.length);
@@ -24,6 +25,7 @@ public class StringMethods {
 	
 		 
 		// string contains
+		System.out.println("Contains : ");
 		 String str2=("Testing Master Technologies");
 		if(str2.contains("Master"))
 		{
@@ -35,13 +37,14 @@ public class StringMethods {
 		} 
 		 
 		 //substring 
-		
+		System.out.println("substring : ");
 		String str3=("Testing Masters Technologies");
 		String s=str3.substring(8, 14);
 		System.out.println("substring " + s);
 		 
 		
 		// ContantEquals	
+		System.out.println("Contant equals : ");
 		 String str4="Srikanth";
 		String str5="srikanth"; 
 		
@@ -55,7 +58,7 @@ public class StringMethods {
 			System.err.println("ContantEquals " + "not same");
 		} 
 			// charArt
-		
+		 System.out.println("CharAt; ");
  		String str6="srikanth";
 		
 			for(int i=0;i<=str6.length();i++)
@@ -68,16 +71,19 @@ public class StringMethods {
 		System.out.print("charArt" +  c);
 		} 
 		 //Converting
+			System.out.println("converting: ");
 	 String h="hyderabad";	// "HYDERABAD";
 	System.out.println("Converting " + h.toLowerCase());
 	System.out.println("Converting " + h.toUpperCase()); 
 		
 		// TRIM
+	System.out.println("Trim: ");
 	 	String str7="  Testing Master  ";
 		str7=str7.trim();
 		System.out.println("TRIM " + str7); 
 		
 		// Index
+		System.out.println("index : ");
 		 String str8="Testing Master";
 		 int index=str8.indexOf(6);
 		 System.out.println("Index " + index); 

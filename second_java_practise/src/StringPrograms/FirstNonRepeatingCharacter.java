@@ -19,14 +19,18 @@ public class FirstNonRepeatingCharacter {
 //    System.out.println("No non-repeating character found.");
 		////////////////////////////////////////////////////////////////////////////////////////////////
     
-    String input1 = "aabccffed";
+  //  String input1 = "aabccffed";
+    String input1 = "loveleetcode";
 
     System.out.print("Non-repeating characters1: ");
     
     for (int j = 0; j< input1.length(); j++) {
         char ch = input1.charAt(j);
         // Check if the character appears only once in the string
-        if (input1.indexOf(ch) == input1.lastIndexOf(ch)) {
+        if (input1.indexOf(ch) == input1.lastIndexOf(ch)&& input1.indexOf(ch)==j) {    //Non repeating characters
+        	
+       // 	   if (input1.indexOf(ch) != input1.lastIndexOf(ch)&& input1.indexOf(ch)==j) { //repeating characters
+        	
             System.out.print(ch + " ");
             // Print the non-repeating character
         }
