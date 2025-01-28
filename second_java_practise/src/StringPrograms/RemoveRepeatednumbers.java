@@ -1,4 +1,4 @@
-package selenium_package;
+package StringPrograms;
 
 public class RemoveRepeatednumbers {
 
@@ -20,7 +20,7 @@ public class RemoveRepeatednumbers {
 	            }
 	             // If it's not a duplicate, print it
 	            if (!isDuplicate) {
-	                System.out.println(repetedNums[i]);
+	                System.out.print(repetedNums[i] + " ");
 	            }
 	        }
 	          	
