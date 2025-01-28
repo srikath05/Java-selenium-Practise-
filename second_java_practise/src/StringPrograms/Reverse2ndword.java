@@ -13,13 +13,17 @@ public class Reverse2ndword {
 
         // Check if the sentence has at least two words
         if (words.length > 1) {
+        	
             // Reverse the second word manually
-            String secondWord = words[1];
+            String secondWord = words[2];
+            
             String reversedSecondWord = "";
+            
             for (int i = secondWord.length() - 1; i >= 0; i--) {
+            	
                 reversedSecondWord += secondWord.charAt(i);
             }
-            words[1] = reversedSecondWord;
+            words[2] = reversedSecondWord;
         }
 
         // Join the words back into a sentence

@@ -20,6 +20,7 @@ public class PatternProgram {
 	
 	System.out.println();
 	}System.out.println("pattern1");
+	
 	//pattern 2
 	
 	for(int k=6;k>=0;k--)
