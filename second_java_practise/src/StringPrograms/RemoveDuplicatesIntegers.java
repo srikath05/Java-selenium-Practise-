@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.Arrays;
 
 public class RemoveDuplicatesIntegers {
 
@@ -22,6 +23,12 @@ public class RemoveDuplicatesIntegers {
 
 	        // Print the unique elements
 	        System.out.println("List without duplicates: " + set);
+	        
+	        int[] arr2 = {1, 1, 2, 3, 3, 4, 5, 5};
+	        
+	        int[] uniqueArray = Arrays.stream(arr2).distinct().toArray(); // Remove duplicates
+	        
+	        System.out.println("Array without duplicates: " + Arrays.toString(uniqueArray));
 		        
 		        // print only duplicate elements 
 		        int[] arr1 = {1, 1, 2, 3, 3, 4, 5, 5};
@@ -35,7 +42,12 @@ public class RemoveDuplicatesIntegers {
 	    }
 	   }
 	  }
+		        
+		        
+		        
+		    }
+	
+	
 	 }
-	}
-
+	
   

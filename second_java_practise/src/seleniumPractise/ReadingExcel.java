@@ -19,8 +19,13 @@ public class ReadingExcel {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		//Create an object of File class to open xlsx file
+		String filepath = "path";
+		String sheetname = "sheet1";
+		readingex(filepath, sheetname);
 		
+	}
+		//Create an object of File class to open xlsx file
+		public static void readingex(String filepath , String sheetname) throws IOException {
 		File file =    new File("C:\\Users\\ganji\\OneDrive\\Desktop\\House Warming.xlsx");
         
 		 //Create an object of FileInputStream class to read excel file
@@ -32,7 +37,7 @@ public class ReadingExcel {
         //creating a Sheet object
         XSSFSheet sheet=wb.getSheet("Sheet1");
         
-for(int i=0; i<=sheet.getLastRowNum();i++) {
+        for(int i=0; i<=sheet.getLastRowNum();i++) {
     	 System.out.println("Row" + i + " data : ");
     	 for(int j=0;j<sheet.getRow(i).getLastCellNum();j++)
     		 System.out.print(sheet.getRow(i).getCell(j) + "= ");
@@ -72,8 +77,8 @@ for(int i=0; i<=sheet.getLastRowNum();i++) {
 //         e.printStackTrace();
 //     }
      
-}
-}
+
+}}
 
 
 

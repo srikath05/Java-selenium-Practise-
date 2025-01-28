@@ -52,22 +52,22 @@ public class windowhandling {
 
 		//driver.quit();
 		
-	}	
-	public static void switchToNewWindow(WebDriver driver) {
-	    // Storing the main window handle
-        String mainWindowHandle = driver.getWindowHandle(); 
-		
-		// Fetching all open window handles
-        Set<String> windowHandles = driver.getWindowHandles(); 
-		
-        for (String windowHandle : windowHandles) {
-            // Switch to the new window handle that is not the main window
-            if (!windowHandle.equals(mainWindowHandle)) {
-                // Switching to the new window/tab
-                driver.switchTo().window(windowHandle);
-                break; // Exit loop after switching
-           
-            }
-}
+	//}	
+//	public static void switchToNewWindow(WebDriver driver) {
+//	    // Storing the main window handle
+//        String mainWindowHandle = driver.getWindowHandle(); 
+//		
+//		// Fetching all open window handles
+//        Set<String> windowHandles = driver.getWindowHandles(); 
+//		
+//        for (String windowHandle : windowHandles) {
+//            // Switch to the new window handle that is not the main window
+//            if (!windowHandle.equals(mainWindowHandle)) {
+//                // Switching to the new window/tab
+//                driver.switchTo().window(windowHandle);
+//                break; // Exit loop after switching
+//           
+//            }
+//}
   }
 }

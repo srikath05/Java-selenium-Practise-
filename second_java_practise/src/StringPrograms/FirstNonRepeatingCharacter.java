@@ -40,15 +40,16 @@ public class FirstNonRepeatingCharacter {
     //Second non repeating characters
     String input = "loveleetcodes";
 
-    int nonRepeatingCount = 0;
+    int SecondnonRepeating = 0;
 
     for (int k = 0; k < input.length(); k++) {
         char cc = input.charAt(k);
         // Check if the character appears only once in the string
         if (input.indexOf(cc) == input.lastIndexOf(cc)) {
-            nonRepeatingCount++; // Increment the count for non-repeating characters
+        	SecondnonRepeating++; // Increment the count for non-repeating characters
 
-            if (nonRepeatingCount == 2) { // If this is the second non-repeating character
+            if (SecondnonRepeating == 2) { // If this is the second non-repeating character
+            	System.out.println();
                 System.out.println("Second non-repeating character: " + cc);
                 return;
             }
