@@ -58,6 +58,24 @@ public class FirstNonRepeatingCharacter {
 
     // If there is no second non-repeating character
     System.out.println("No second non-repeating character found.");
+    
+    // non reapeting numbers
+    
+    int[] arr = {1, 1, 2, 3, 3, 4, 5, 5};
+	 
+	for(int i=0;i<arr.length;i++) {
+		boolean uni = true;
+		for(int j=0;j<arr.length;j++) {
+			if(i!=j && arr[i]==arr[j]) {
+				uni = false;
+				break;
+			}
+		}
+		if(uni) {
+			System.out.println(arr[i] + " ");
+		}
+	}
+    
    }   
 }
 	    

@@ -22,7 +22,7 @@ public class occurenceofWordsinSentence {
                 occurrenceMap.put(item, 1);
             }
         }
-
+       
         // Print the result
         System.out.println(occurrenceMap);
 	}

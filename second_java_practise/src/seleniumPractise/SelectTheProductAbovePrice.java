@@ -30,14 +30,14 @@ static WebDriver driver;
         driver.findElement(By.xpath("//span[text()='Samsung']/preceding::i[@class='a-icon a-icon-checkbox'][1]")).click();
         // Wait for results to load (simple delay)
         Thread.sleep(5000);
-
+ 
         
         // Retrieve and display mobiles above 15,000
         List<WebElement> mobileNames = driver.findElements(By.xpath("//h2[@class='a-size-base-plus a-spacing-none a-color-base a-text-normal']/span"));
         List<WebElement> mobilePrices = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
         
-        System.out.println(mobileNames);
-        System.out.println(mobilePrices);
+        System.out.println(mobileNames.size());
+        System.out.println(mobilePrices.size());
 
         System.out.println("Mobiles priced above 55,000:");
 
@@ -52,8 +52,7 @@ static WebDriver driver;
                 System.out.println(name + " - rupess " + price);
             }
         }
-        
-      
+            
       	driver.quit();
 	}
 

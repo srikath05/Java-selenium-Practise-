@@ -15,7 +15,7 @@ import org.openqa.selenium.interactions.Action;
 
 public class WebTableCheckboxesClicking {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		
@@ -39,14 +39,10 @@ public class WebTableCheckboxesClicking {
 			WebElement checkbox = checkboxes.get(i);
 			if (!checkbox.isSelected()) {
 				checkbox.click();
-				try {
-					Thread.sleep(3000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				
+				Thread.sleep(3000);
 				System.out.println("Checkbox " + (i + 1) + " clicked.");
-			} else {
+				} else {
 				System.out.println("Checkbox " + (i + 1) + " is already selected.");
 			}
 		}

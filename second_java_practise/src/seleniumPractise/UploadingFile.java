@@ -47,6 +47,8 @@ public class UploadingFile {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].clicl();", hiddenElement);
 			
+			js.executeScript("arugment", "hiddenelement");
+			
 	}
 
 }

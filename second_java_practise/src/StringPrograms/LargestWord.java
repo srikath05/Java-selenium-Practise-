@@ -1,5 +1,8 @@
 package StringPrograms;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class LargestWord {  
  public static void main(String[] args) {
 		 
@@ -14,22 +17,40 @@ public class LargestWord {
 		 }
 	 }System.out.println(largest);
 	 
-	 //Smallest word
 	 
-	  String[] Names1 = {"Srikanth", "Rickyganji", "SriHamsiniganji"};
-
-      // Initialize the smallest word to the first element
-      String smallest = Names1[0];
-
-      // Loop through the array to find the smallest word
-      for (int i = 1; i < Names1.length; i++) {
-          if (Names1[i].length() < smallest.length()) {
-              smallest = Names1[i];
-          }
-      }
-
-      // Print the smallest word
-      System.out.println("The smallest word is: " + smallest);
+	  //second and largest word	
+	 
+	 
+	 String[] input = {"Srikanth", "Rickyganji", "SriHamsiniganji"};
+	 
+	 String Largest ="";
+	 String secondlargest = "";
+	 
+	 for(int i=0;i<input.length;i++) {
+		 
+		 if(input[i].length()>Largest.length()) {
+			 secondlargest = Largest;
+			 Largest = input[i];
+		 }else if(input[i].length()>secondlargest.length()&& input[i].length()<Largest.length()) {
+			 
+			 secondlargest = input[i];
+		 }
+	 }System.out.println("Largest " + Largest + " - Length : " + Largest.length());
+	 System.out.println("Secondlargest " + secondlargest + " - Length : " + secondlargest.length());
+	
+	 //smallest word
+	 
+	 String[] arr = {"Srikanth", "Rickyganji", "SriHamsiniganji"};
+	 
+	 String smallest = arr[0]; 
+	 
+	 for(int i=0;i<arr.length;i++) {
+		 
+		 if(arr[i].length()<smallest.length()) {
+			 smallest = arr[i];
+		 }
+	 }
+	 System.out.println("smallest name in array is : " + smallest + " - Length " + smallest.length());
 	 
       //Smallest number
       int[] array = {12, 35, 1, 10, 34, 36};
@@ -48,7 +69,17 @@ public class LargestWord {
       System.out.println("The least number in the array is: " + least);
 	
 			
-	 }
-}
+      
+      // Print max of 6 characters
 
+	    List<String> inputList = Arrays.asList("Testing", "QA", "Automation", "SDET", "Code", "Python");
+
+      // Loop through the list and find the word with exactly 6 characters
+      for (String word : inputList) {
+          if (word.length() == 7) {
+              System.out.println("word which as max of 6 char length : " + word);
+          }
+      }
+      
+ }}
 

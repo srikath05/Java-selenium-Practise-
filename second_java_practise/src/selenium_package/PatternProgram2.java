@@ -7,7 +7,7 @@ public class PatternProgram2 {
 
 		
 		int i,j;
-		for(i=0;i<7;i++)
+		for(i=0;i<=7;i++)
 		{
 			
 			
@@ -21,10 +21,10 @@ public class PatternProgram2 {
 			
 		
 		//pattern 2
-	     int n = 5; // Number of rows
+	     // Number of rows
 	        int num = 1; // Starting number
 
-	        for (int a = 1; a <= n; a++) {
+	        for (int a = 1; a <= 5; a++) {
 	        	        	
 	            for (int b = 1; b <= a; b++) {
 	                System.out.print(num + " ");

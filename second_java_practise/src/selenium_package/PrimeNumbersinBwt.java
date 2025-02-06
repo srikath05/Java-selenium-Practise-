@@ -5,7 +5,7 @@ public class PrimeNumbersinBwt {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-	for(int n =2; n<=50; n++) {
+	for(int n =100; n<=200; n++) {
 		
 	boolean isPrime = true;
 	
