@@ -17,7 +17,7 @@ public class PrimeNumbersinBwt {
 		}
 	}
 	if(isPrime) {
-		System.out.print(n +" ");
+		System.out.println(n +" ");
 	}
 	
 	}
