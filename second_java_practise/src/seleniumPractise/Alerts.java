@@ -1,6 +1,8 @@
 package seleniumPractise;
 
 import java.time.Duration;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,9 +22,8 @@ public class Alerts {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//button[@onclick='windowAlertFunction()']")).click();
-		
-		driver.switchTo().alert().accept();
-	
+		Alert alert = driver.switchTo().alert();
+		alert.sendKeys("yes");
 	    driver.findElement(By.xpath("//button[@onclick='promptAlertFunction()']")).click();
 		driver.switchTo().alert().sendKeys("Yes");
 		driver.switchTo().alert().accept();

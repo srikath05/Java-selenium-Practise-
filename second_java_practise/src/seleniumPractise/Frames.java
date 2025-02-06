@@ -21,14 +21,14 @@ public class Frames {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         
         // 1. Switch to iframe using index (if the iframe is the first one on the page)
-      //  driver.switchTo().frame(0);  // Index starts from 0
+       driver.switchTo().frame(0);  // Index starts from 0
         
         // 2. Or switch to iframe using name or ID
-        // driver.switchTo().frame("iframe_name_or_id");
+         driver.switchTo().frame("iframe_name_or_id");
 
         // 3. Or switch to iframe using a WebElement
-        // WebElement iframeElement = driver.findElement(By.id("iframe_id"));
-        // driver.switchTo().frame(iframeElement);
+        WebElement iframeElement = driver.findElement(By.id("iframe_id"));
+         driver.switchTo().frame(iframeElement);
 
         // Perform actions inside the iframe
         WebElement elementInIframe = driver.findElement(By.xpath("//a[text()='Click to practice shadow dom inside iframe scenario']"));

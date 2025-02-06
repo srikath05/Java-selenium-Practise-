@@ -8,18 +8,10 @@ public class Anagrams {
 		        String a = "listern";
 		        String t = "silent";
 
-		        // Check if the strings are anagrams
-		        if (isAnagram(a, t)) {
-		            System.out.println("The strings are anagrams.");
-		        } else {
-		            System.out.println("The strings are not anagrams.");
-		        }
-		    }
-
-		    static boolean isAnagram(String a, String t) {
-		        // Check if lengths are different
+		     // Check if lengths are different
 		        if (a.length() != t.length()) {
-		            return false;
+		            System.out.println("The strings are not anagrams.");
+		            return;
 		        }
 
 		        // Sort the characters of both strings
@@ -30,7 +22,11 @@ public class Anagrams {
 		        Arrays.sort(tChars);
 
 		        // Compare the sorted arrays
-		        return Arrays.equals(aChars, tChars);
+		        if (Arrays.equals(aChars, tChars)) {
+		            System.out.println("The strings are anagrams.");
+		        } else {
+		            System.out.println("The strings are not anagrams.");
+		        }
 		    }
 		}
 

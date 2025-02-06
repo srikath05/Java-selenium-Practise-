@@ -15,16 +15,14 @@ public class BrokenLinks {
 		static WebDriver driver;
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		
-		
+			
 		driver = new ChromeDriver();
-	   
-		driver.get("https://www.amazon.in/");
+	   	driver.get("https://www.amazon.in/");
+		driver.navigate().refresh();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
-		
-		TakeScreenshot.takeScreenshot(driver, "C:\\Users\\ganji\\OneDrive\\Desktop\\Takescreenshot\\");
+				
+		//TakeScreenshot.takeScreenshot(driver, "C:\\Users\\ganji\\OneDrive\\Desktop\\Takescreenshot\\");
 		
 		List <WebElement> Links = driver.findElements(By.tagName("a"));
 		
@@ -34,29 +32,27 @@ public class BrokenLinks {
 			WebElement ele = Links.get(i);
 			
 			String Urllink = ele.getAttribute("href");
-			try {
-				VerifyLink(Urllink);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				 e.printStackTrace();
-			}
-		}driver.quit();
-		
-	}
-
-	private static void VerifyLink(String Urllink)throws IOException {
-		
+			
+			   if (Urllink == null || Urllink.isEmpty()) {
+	                System.out.println("Skipping empty or null URL");
+	                continue;
+	            }
+					
 		URL link = new URL(Urllink);
 		
 		HttpURLConnection httpconnect = (HttpURLConnection) link.openConnection();
 		httpconnect.connect();
-	      if (httpconnect.getResponseCode() == 200) {
-	            System.out.println(Urllink + " is valid.");
+	      if (httpconnect.getResponseCode() != 200) {
+	           
+	    	    System.out.println(Urllink + " is broken. HTTP Response Code: " + httpconnect.getResponseCode() + " " + httpconnect.getResponseMessage());
+		        
 	        } else {
-	            System.out.println(Urllink + " is broken. HTTP Response Code: " + httpconnect.getResponseCode() + " " + httpconnect.getResponseMessage());
-	        }
+	        	 System.out.println(Urllink + " is valid." + httpconnect.getResponseCode());
+	         }
 		
 		
+	}
+	}
 	}
 		
 		
@@ -90,7 +86,7 @@ public class BrokenLinks {
 		 * 
 		 * // Close the browser driver.quit();
 		 */
-	}
+	
 
 	
 

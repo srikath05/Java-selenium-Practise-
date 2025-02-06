@@ -16,7 +16,6 @@ public class PrimeIndexCharacters {
 		                    break;
 		                }
 		            }
-
 		            // If the index is prime, print the character
 		            if (isPrime) {
 		                System.out.print(input.charAt(i));

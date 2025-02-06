@@ -14,7 +14,7 @@ public class Occurancecount {
 	        Map<Character, Integer> occurrenceMap = new HashMap<>();
 
 	     // Iterate over each character in the string
-	        for (int i = 0; i < str.length(); i++) {
+	    /*    for (int i = 0; i < str.length(); i++) {
 	        	
 	        	 // Get the character at the current index
 	            char ch = str.charAt(i);
@@ -27,6 +27,16 @@ public class Occurancecount {
 	            	 // If it's not in the map, add it with an initial count of 1
 	                occurrenceMap.put(ch, 1);
 	            }
+	        }*/
+	        
+         for(char ch : str.toCharArray()) {
+	        	
+	        	if(occurrenceMap.containsKey(ch)) {
+	        		
+	        		occurrenceMap.put(ch, occurrenceMap.get(ch)+1);
+        	}else {
+	        		occurrenceMap.put(ch, 1);
+	        	}
 	        }
 	        // Print the result
 	        System.out.println(occurrenceMap);

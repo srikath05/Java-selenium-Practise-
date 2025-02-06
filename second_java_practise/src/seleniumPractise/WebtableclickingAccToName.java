@@ -14,6 +14,7 @@ public class WebtableclickingAccToName {
 	        try {
 	            // Navigate to the page with the web table
 	            driver.get("https://example.com");
+	            
 
 	            // Target name to find
 	            String targetName = "Jane Smith";

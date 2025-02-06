@@ -16,7 +16,7 @@ public class HigestElementInaArray {
 	        int highest = array[0]; // Assume the first element is the highest
 
 	        // Iterate through the array to find the highest integer
-	        for (int i = 1; i < array.length; i++) {
+	        for (int i = 0; i < array.length; i++) {
 	            if (array[i] > highest) {
 	                highest = array[i];
 	            }

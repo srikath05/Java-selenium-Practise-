@@ -39,15 +39,13 @@ public class RemoveDuplicatesIntegers {
 		                if (arr1[i] == arr1[j]) {
 		                    System.out.print(arr1[i] + " ");
 		                    break; // Skip further checks for this duplicate
-	    }
-	   }
-	  }
-		        
-		        
-		        
-		    }
+		                }   
+		                }
+		               }
+		} 
+	}
 	
 	
-	 }
+	
 	
   
