@@ -21,7 +21,7 @@ public class AmazonSearchoption {
 		        WebDriver driver = new ChromeDriver();
 
 		        // Launch Amazon website
-		        driver.get("https://www.amazon.in/");
+		        driver.get("https://www.amazon.in");
 
 		        // Maximize the browser window
 		        driver.manage().window().maximize();
@@ -46,14 +46,14 @@ public class AmazonSearchoption {
 		          {
 		            String name = productNames.get(i).getText();
 		            
-		          //  String price = (i < productPrices.size()) ? productPrices.get(i).getText() : "Price not available";
+		            String price = (i < productPrices.size()) ? productPrices.get(i).getText() : "Price not available";
 		            
-		            String price;
+		          /*  String price;
 		            if (i < productPrices.size()) {
 		                price = productPrices.get(i).getText();
 		            } else {
 		                price = "Price not available";
-		            }
+		            }*/
 		            
 		            System.out.println("Product Name: " + name );
 		            System.out.println(" Price: " + price);

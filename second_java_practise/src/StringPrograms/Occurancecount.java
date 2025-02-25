@@ -41,6 +41,30 @@ public class Occurancecount {
 	        // Print the result
 	        System.out.println(occurrenceMap);
 			
+	        
+	        // Most frequent character in the string 
+	        
+	        String input = "loveleetcodes";
+	        System.out.println("Most frequent character in the string is : ");
+	          Map<Character, Integer> charCountMap = new HashMap<>();
+	          int maxCount = 0;
+	          char mostFrequentChar = ' ';
+
+	          // Count frequency of each character
+	          for (char ch : input.toCharArray()) {
+	              charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+	              
+	              // Update most frequent character if new max found
+	              if (charCountMap.get(ch) > maxCount) {
+	                  maxCount = charCountMap.get(ch);
+	                  mostFrequentChar = ch;
+	              }
+	          }
+	          System.out.println(mostFrequentChar);
+	        
+	        
+	        
+	        
 		  //String text1 = "hello world, hello everyone";
 		  String text1 = "The quick brown fox jumps over the lazy dog. The dog barked.";
 		  String text2 = text1.toLowerCase();

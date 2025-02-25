@@ -54,7 +54,13 @@ public class BrokenLinks {
 	}
 	}
 	}
-		
+		/* HttpURLConnection connection = (HttpURLConnection) new URL(linkURL).openConnection();
+connection.setRequestMethod("HEAD");
+int responseCode = connection.getResponseCode();
+if (responseCode >= 400) {
+    System.out.println("Broken Link: " + linkURL);
+}
+		 */
 		
 		/*
 		 * // Open the website driver.get("https://www.amazon.in/");

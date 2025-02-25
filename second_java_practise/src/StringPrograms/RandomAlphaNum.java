@@ -8,9 +8,9 @@ public class RandomAlphaNum {
 		// TODO Auto-generated method stub
 
 		String reqstring = UUID.randomUUID().toString();
-		
-		reqstring = reqstring.replace("-", "");
-		reqstring = reqstring.substring(0,6);
+	
+		//reqstring = reqstring.replace("-", "");
+		reqstring = reqstring.substring(0,8);
 		
 		System.out.println("String = " + reqstring );
 	}

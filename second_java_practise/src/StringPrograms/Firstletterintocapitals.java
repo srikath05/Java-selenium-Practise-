@@ -5,37 +5,28 @@ public class Firstletterintocapitals {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		
-		        String s = "my name is srikanth";
-		        
-		        String[] words = s.split(" ");
-		        
+		        // String words = "this is interview for srikANTH";
+				
+				//This Is Interview For Srikanth
+				
+				String input = "this is interview for srikANTH";
+		        String[] words = input.toLowerCase().split(" ");
 		        String result = "";
 
-		        // Loop through each word in the array
-		        for (int i = 0; i < words.length; i++) {
-		        	
-		            String word = words[i];
+		        for (String word : words) {
 		            
-		            // Capitalize the first letter and add the rest of the word
-		          	  result += Character.toUpperCase(word.charAt(0)) + word.substring(1);
-		            
-//		            if (word.length() > 1) {
-//		            word = word.charAt(0) + Character.toUpperCase(word.charAt(1)) + word.substring(2);
-//		            }
-//		            
-//		            result += word;
-		            // Add a space between words except for the last one
-		            if (i < words.length - 1) {
-		            	
-		                result += " ";
-		            }
-		        }
+		                result += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
+						 //Character.toUpperCase(word.charAt(0)) - Capitalizes the first letter. 
+		                // word.substring(1) → Extracts the remaining letters after the first character.		 
+						 }
 		        
-		        // Print the final result
-		        System.out.println(result);
+		        
+
+		      //  result = result.trim(); // Remove trailing space
+		        System.out.println(result);  // Output: "This Is Interview For Srikanth"
+		        
+				}
 		
 
 	}
 
-}
