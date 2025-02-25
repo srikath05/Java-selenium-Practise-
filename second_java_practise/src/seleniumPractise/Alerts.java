@@ -11,14 +11,9 @@ public class Alerts {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		
 		WebDriver driver=new ChromeDriver();
-		
-		
-		
 		driver.get("https://selectorshub.com/xpath-practice-page");
-		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//button[@onclick='windowAlertFunction()']")).click();

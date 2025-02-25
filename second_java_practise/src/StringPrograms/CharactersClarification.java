@@ -12,22 +12,28 @@ public class CharactersClarification {
 		        int lowercaseCount = 0;
 		        int digitCount = 0;
 		        int specialCharCount = 0;
-
+		        String uppercase ="";
+		      
 		        for (int i = 0; i < input.length(); i++) {
 		            char ch = input.charAt(i);
 
 		            if (Character.isUpperCase(ch)) {
-		                uppercaseCount++;
-		            } else if (Character.isLowerCase(ch)) {
+		            	//System.out.print( ch );
+		               uppercaseCount++;
+		              } else if (Character.isLowerCase(ch)) {
+		            	 
 		                lowercaseCount++;
+		               
 		            } else if (Character.isDigit(ch)) {
 		                digitCount++;
+		                
 		            } else {
 		                specialCharCount++;
+		                
 		            }
 		        }
-
-		        System.out.println("Uppercase letters: " + uppercaseCount);
+		        
+		        System.out.println("Uppercase letters: " + uppercaseCount );
 		        System.out.println("Lowercase letters: " + lowercaseCount);
 		        System.out.println("Digits: " + digitCount);
 		        System.out.println("Special characters: " + specialCharCount);

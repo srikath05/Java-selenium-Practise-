@@ -40,6 +40,7 @@ public class windowhandling {
 		String expectedUrl ="https://demo.opencart.com/";
 		if (newwindowUrl.equals(expectedUrl)) {
 			System.out.println("URL is correct: " + newwindowUrl);
+			
 		} else {
 			System.out.println("URL is incorrect. Expected: " + expectedUrl + ", but got: " + newwindowUrl);
 		}

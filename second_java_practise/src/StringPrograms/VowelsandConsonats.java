@@ -12,9 +12,10 @@ public class VowelsandConsonats {
 				int vowels =0,consonats =0;
 				
 				  
-				    for (int i = 0; i < str.length(); i++) {
-				        char c = str.charAt(i);
+				   // for (int i = 0; i < str.length(); i++) {
+				    //    char c = str.charAt(i);
 
+				        for(char c : str.toCharArray()) {
 				  
 				            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
 				                vowels++;

@@ -3,7 +3,7 @@ package StringPrograms;
 import java.util.Arrays;
 import java.util.List;
 
-public class LargestWord {  
+public class LargestWord2 {  
  public static void main(String[] args) {
 		 
 	 String[] Names = {"Srikanth", "Rickyganji", "SriHamsiniganji"};

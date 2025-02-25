@@ -40,8 +40,9 @@ public class RemoveDuplicatesIntegers {
 		                    System.out.print(arr1[i] + " ");
 		                    break; // Skip further checks for this duplicate
 		                }   
-		                }
-		               }
+		              }
+		           }
+		        
 		} 
 	}
 	

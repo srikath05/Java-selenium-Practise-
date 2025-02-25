@@ -7,7 +7,7 @@ public class PatternProgram2 {
 
 		
 		int i,j;
-		for(i=0;i<=7;i++)
+		for(i=0;i<=6;i++)
 		{
 			
 			

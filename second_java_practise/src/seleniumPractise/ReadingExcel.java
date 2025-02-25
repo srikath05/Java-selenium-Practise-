@@ -9,10 +9,13 @@ import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 public class ReadingExcel {
 
@@ -22,20 +25,21 @@ public class ReadingExcel {
 		String filepath = "path";
 		String sheetname = "sheet1";
 		readingex(filepath, sheetname);
-		
 	}
 		//Create an object of File class to open xlsx file
 		public static void readingex(String filepath , String sheetname) throws IOException {
-		File file =    new File("C:\\Users\\ganji\\OneDrive\\Desktop\\House Warming.xlsx");
-        
+		File file =    new File("C:/Users/ganji/OneDrive/Desktop/2025/Emp Details.xlsx");
+		
+		XSSFWorkbook wb;
+		XSSFSheet sheet;
 		 //Create an object of FileInputStream class to read excel file
         FileInputStream inputStream = new FileInputStream(file);
 
         //creating workbook instance that refers to .xls file
-        XSSFWorkbook wb=new XSSFWorkbook(inputStream);
+        wb=new XSSFWorkbook(inputStream);
 
         //creating a Sheet object
-        XSSFSheet sheet=wb.getSheet("Sheet1");
+        sheet=wb.getSheet(sheetname);
         
         for(int i=0; i<=sheet.getLastRowNum();i++) {
     	 System.out.println("Row" + i + " data : ");
@@ -46,39 +50,65 @@ public class ReadingExcel {
     	   	 
      wb.close();
      inputStream.close();
-//     
-//     String excelFilePath = "path_to_your_excel_file.xlsx"; // Replace with your file path
-//     String roleToSearch = "tl"; // Replace with the role you want to search
-//
-//     try (FileInputStream file = new FileInputStream(new File(excelFilePath));
-//          Workbook workbook = new XSSFWorkbook(file)) {
-//
-//         // Get the first sheet
-//         Sheet sheet = workbook.getSheetAt(0);
-//
-//         // Iterate through rows
-//         for (Row row : sheet) {
-//             Cell roleCell = row.getCell(0); // Role column
-//             if (roleCell != null && roleCell.getStringCellValue().equalsIgnoreCase(roleToSearch)) {
-//                 // Fetch User ID and Password
-//                 String userId = row.getCell(1).getStringCellValue(); // User ID column
-//                 String password = row.getCell(2).getStringCellValue(); // Password column
-//
-//                 // Print the result
-//                 System.out.println("Role: " + roleToSearch);
-//                 System.out.println("User ID: " + userId);
-//                 System.out.println("Password: " + password);
-//                 return;
-//             }
-//         }
-//
-//         System.out.println("Role not found: " + roleToSearch);
-//     } catch (IOException e) {
-//         e.printStackTrace();
-//     }
-     
+		}
+		
+		public class ExcelUtil {
+			 
+			private static final String TEST_DATA_SHEET_PATH = "C:/Users/ganji/OneDrive/Desktop/2025/Emp Details.xlsx";
+			private XSSFWorkbook book;
+			private XSSFSheet sheet;
+		 
+			public Object[][] getTestData(String sheetName) {
+				Object data[][] = null;
+		 
+				try {
+					FileInputStream ip = new FileInputStream(TEST_DATA_SHEET_PATH);
+					book = new XSSFWorkbook(ip);
+					sheet = book.getSheet(sheetName.trim());
+		 
+					data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+		 
+					for (int i = 0; i < sheet.getLastRowNum(); i++) {
+						for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++) {
+							data[i][j] = sheet.getRow(i + 1).getCell(j).toString();
+						}
+					}
+		return data;
+			}catch(Exception e) {
+				
+				System.out.println();
+			}
+				return data;}
+		}}
+/*
+ * 
+ * @DataProvider(name = "registerData")
+    public Object[][] getRegisterData() {
+        // Sheet name to fetch data from
+        String sheetName = "register";
+ 
+        // Call ExcelUtil to read the data from the Excel file
+        return ExcelUtil.getTestData(sheetName);
+    }
+    //////////////////////////////////////////////////////////////
+@DataProvider(name = "EmpTestData")
+public Object[][] empTestData() {
+	return new Object[][] {
+			// EmpID,Name,Skills
+			{ 1120312, "Veera", Arrays.asList("Java", "Postman", "TestNG") },
+			{ 1120313, "Srikanth", Arrays.asList("Java", "BDD", "TestNG") }
 
-}}
+	};
+}
 
+@Test(dataProvider = "EmpTestData")
+public void empTest(int empID, String empName, List<String> skills) {
+	System.out.println("empID.." + empID);
+	System.out.println("empName.." + empName);
+	System.out.println("skills.." + skills);
 
+	assert !empName.isEmpty() : "Name should not be empty";
+	assert !skills.isEmpty() : "Skills should not be empty";
+
+}*/
 

@@ -49,11 +49,11 @@ static WebDriver driver;
             int price = Integer.parseInt(priceText);
 
             if (price < 55000) {
-                System.out.println(name + " - rupess " + price);
+                System.out.println("mobile name " + name + " , " + price + " .rupess ");
             }
         }
             
-      	driver.quit();
+      	//driver.quit();
 	}
 
 }
