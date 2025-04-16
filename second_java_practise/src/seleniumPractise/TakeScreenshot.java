@@ -33,6 +33,35 @@ public class TakeScreenshot {
 	          FileHandler.copy(srcFile, destFile); 
 	            System.out.println("Screenshot saved at: " + filePath);
 		}
-	}
+		////////////////////////////////////////////
+		
+		//  @Override
+		  /*  public void onTestFailure(ITestResult result) {
+		        try {
+		            TakesScreenshot ts = (TakesScreenshot) driver;
+		            File source = ts.getScreenshotAs(OutputType.FILE);
+		            Files.copy(source.toPath(), new File("./Screenshots/" + result.getName() + ".png").toPath());
+		            System.out.println("Screenshot captured for failed test case: " + result.getName());
+		        } catch (Exception e) {
+		            e.printStackTrace();
+		        }*/
+		
+		////////////////////////////////////////
+
+        // Take a screenshot
+    /*    Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+
+        // Generate timestamp for unique file name
+        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+
+        // Define the destination path
+        string filePath = @"C:\Screenshots\Screenshot_" + timestamp + ".jpg";
+
+        // Save the screenshot
+        screenshot.SaveAsFile(filePath, ScreenshotImageFormat.Jpeg);
+
+        Console.WriteLine("Screenshot saved at: " + filePath);    */
+    }
+
 
 

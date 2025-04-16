@@ -27,9 +27,11 @@ public class BrokenLinks {
 		List <WebElement> Links = driver.findElements(By.tagName("a"));
 		
 	 
-		for(int i=0; i<Links.size();i++)
-		{			
-			WebElement ele = Links.get(i);
+		/*
+		 * for(int i=0; i<Links.size();i++) { WebElement ele = Links.get(i);
+		 */
+			
+			for(WebElement ele : Links) {
 			
 			String Urllink = ele.getAttribute("href");
 			
@@ -54,7 +56,13 @@ public class BrokenLinks {
 	}
 	}
 	}
-		
+		/* HttpURLConnection connection = (HttpURLConnection) new URL(linkURL).openConnection();
+connection.setRequestMethod("HEAD");
+int responseCode = connection.getResponseCode();
+if (responseCode >= 400) {
+    System.out.println("Broken Link: " + linkURL);
+}
+		 */
 		
 		/*
 		 * // Open the website driver.get("https://www.amazon.in/");

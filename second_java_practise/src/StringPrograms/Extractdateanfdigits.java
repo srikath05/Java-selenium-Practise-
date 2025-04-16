@@ -15,8 +15,10 @@ public class Extractdateanfdigits {
 		        String date = "";
 		        
 		        // Iterate over the words array using a normal loop
-		        for (int i = 0; i < words.length; i++) {
-		            String word = words[i];
+		    //    for (int i = 0; i < words.length; i++) {
+		       //     String word = words[i];
+		            
+		            for(String word : words) {
 		            
 		            // Check if the word is numeric (number)
 		            if (word.matches("\\d+")) {

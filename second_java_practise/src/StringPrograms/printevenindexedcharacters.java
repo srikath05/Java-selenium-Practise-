@@ -14,9 +14,9 @@ public class printevenindexedcharacters {
 			if (i % 2 == 0){
 				//if (i % 2 != 0){ //for odd letters to print
 				
-				System.out.print(str.charAt(i));
+				System.out.print(str.charAt(i)+ " ");
 				
 				}
 			}
-	   }
+	 }
 }

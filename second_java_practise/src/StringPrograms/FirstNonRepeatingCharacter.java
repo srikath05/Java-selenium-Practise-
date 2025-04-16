@@ -1,5 +1,8 @@
 package StringPrograms;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FirstNonRepeatingCharacter {
 
 	public static void main(String[] args) {
@@ -24,8 +27,10 @@ public class FirstNonRepeatingCharacter {
 
     System.out.print("Non-repeating characters1: ");
     
-    for (int j = 0; j< input1.length(); j++) {
-        char ch = input1.charAt(j);
+    for (int j = 0; j< input1.length(); j++){
+    char ch = input1.charAt(j);
+     
+         
         // Check if the character appears only once in the string
         if (input1.indexOf(ch) == input1.lastIndexOf(ch)&& input1.indexOf(ch)==j) {    //Non repeating characters
         	
@@ -42,8 +47,11 @@ public class FirstNonRepeatingCharacter {
 
     int SecondnonRepeating = 0;
 
-    for (int k = 0; k < input.length(); k++) {
-        char cc = input.charAt(k);
+	/*
+	 * for (int k = 0; k < input.length(); k++) { char cc = input.charAt(k);
+	 */
+        
+        for(char cc : input.toCharArray()) {
         // Check if the character appears only once in the string
         if (input.indexOf(cc) == input.lastIndexOf(cc)) {
         	SecondnonRepeating++; // Increment the count for non-repeating characters
@@ -55,9 +63,52 @@ public class FirstNonRepeatingCharacter {
             }
         }
     }
+    
+    String inputword = "my name is srikanth and my my name";
+	
+	String[] words = inputword.split(" ");
+	  System.out.println("most frequently occurred word in the string : ");
+	Map<String,Integer> maxchar = new HashMap<>();
+	
+	//int maxcount =Integer.MAX_VALUE; // for lowest frequency char 
+	int maxcount = 0;
+	String maxcharacter = "";
+	
+	for(String  chh : words) {
+		
+		maxchar.put(chh , maxchar.getOrDefault(chh, 0)+1);
+		
+		if(maxchar.get(chh)>maxcount) {
+			
+			maxcount = maxchar.get(chh);
+			maxcharacter = chh;
+		}
+	}
+	System.out.println("most repeated word : " + maxcharacter);
+	
+	/////////////////////////////     
+	
+	  String input3 = "loveleetcodes";
+	  
+	  System.out.println("most frequently occurred character in the string : ");
+	  HashMap<Character, Integer> charCountMap = new HashMap<>();
+      int maxCount = 0;
+      char mostFrequentChar = ' ';
+
+      // Count frequency of each character
+      for (char cha : input3.toCharArray()) {
+          charCountMap.put(cha, charCountMap.getOrDefault(cha, 0) + 1);
+          
+          // Update most frequent character if new max found
+          if (charCountMap.get(cha) > maxCount) {
+              maxCount = charCountMap.get(cha);
+              mostFrequentChar = cha;
+          }
+      }
+      System.out.println(mostFrequentChar);
 
     // If there is no second non-repeating character
-    System.out.println("No second non-repeating character found.");
+ //   System.out.println("No second non-repeating character found.");
     
     // non reapeting numbers
     
@@ -72,12 +123,9 @@ public class FirstNonRepeatingCharacter {
 			}
 		}
 		if(uni) {
-			System.out.println(arr[i] + " ");
+			System.out.print(arr[i] + " ");
 		}
 	}
     
-   }   
-}
-	    
-
-
+    	   }}	   
+	

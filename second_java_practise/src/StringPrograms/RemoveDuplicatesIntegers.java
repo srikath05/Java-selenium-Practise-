@@ -34,14 +34,14 @@ public class RemoveDuplicatesIntegers {
 		        int[] arr1 = {1, 1, 2, 3, 3, 4, 5, 5};
 
 		        System.out.print("Duplicate elements: ");
-		        for (int i = 0; i < arr1.length; i++) {
-		            for (int j = i +1; j < arr1.length; j++) {
-		                if (arr1[i] == arr1[j]) {
+		        for (int i = 0; i < arr1.length; i++) {  // Outer loop - picks an element
+		            for (int j = i + 1; j < arr1.length; j++) {  // Inner loop - compares with later elements
+		                if (arr1[i] == arr1[j]) { // If duplicate is found
 		                    System.out.print(arr1[i] + " ");
-		                    break; // Skip further checks for this duplicate
-		                }   
-		                }
-		               }
+		                    break; // Skip further checks for this element
+		           }   
+		         }
+		       }	        
 		} 
 	}
 	

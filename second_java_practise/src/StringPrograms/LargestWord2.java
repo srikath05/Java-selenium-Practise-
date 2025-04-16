@@ -3,7 +3,7 @@ package StringPrograms;
 import java.util.Arrays;
 import java.util.List;
 
-public class LargestWord {  
+public class LargestWord2 {  
  public static void main(String[] args) {
 		 
 	 String[] Names = {"Srikanth", "Rickyganji", "SriHamsiniganji"};
@@ -16,24 +16,21 @@ public class LargestWord {
 			 largest = Names[i];
 		 }
 	 }System.out.println(largest);
-	 	 
-	  //second and largest word	
-	 	 
-	// String[] input = {"Srikanth", "ganjiSriansh", "SriHamsiniganji"};
-	    String inputword = "my name is srikanth and my my name";
 	 
-	 String[] input = inputword.split(" ");
+	 
+	  //second and largest word	
+	 
+	 
+	 String[] input = {"Srikanth", "ganjiSriansh", "SriHamsiniganji"};
+	 
 	 String Largest ="";
 	 String secondlargest = "";
 	 
 	 for(int i=0;i<input.length;i++) {
 		 
 		 if(input[i].length()>Largest.length()) {
-			 
 			 secondlargest = Largest;
-			 
 			 Largest = input[i];
-			 
 		 }else if(input[i].length()>secondlargest.length()&& input[i].length()<Largest.length()) {
 			 
 			 secondlargest = input[i];

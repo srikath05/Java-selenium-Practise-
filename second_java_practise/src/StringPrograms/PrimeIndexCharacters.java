@@ -3,7 +3,8 @@ package StringPrograms;
 public class PrimeIndexCharacters {
 
 		   public static void main(String[] args) {
-			   String input = "HelloWorldHieveryone";
+			   String input = "Hello World Hi every one";
+			 //  input = input.replaceAll(" ", "");
 
 		        System.out.print("Characters at prime indices: ");
 		        for (int i = 2; i < input.length(); i++) { // Start from index 2

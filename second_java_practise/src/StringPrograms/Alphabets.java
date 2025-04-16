@@ -23,19 +23,16 @@ public class Alphabets {
 		        System.out.println("without duplicates : " + Arrays.toString(uniqueArray) + " ");
 		      
 		      String input = "Hello123456!@#WORLD";
-		        String output = ""; // Initialize an empty string
-
-		        // Iterate through the input string using a normal for loop
-		        for (int i = 0; i < input.length(); i++) {
-		            char c = input.charAt(i); // Get the character at the current index
-		             	if(!Character.isDigit(c) && Character.isAlphabetic(c))
-		            { // Check if it's an alphabet
-		                output += c; // Concatenate the character to the output
-		            }
-		        }
-		      System.out.println(output);
+			
+		      System.out.print("only alphabets = ");
+		      for(char ch : input.toCharArray()) {
+		    	  
+		    	  if(Character.isAlphabetic(ch)) {
+		    	 	  System.out.print(ch);
+		    	
+		    	  }
+		       }
 		    }
-		
-	}
+		}
 
 

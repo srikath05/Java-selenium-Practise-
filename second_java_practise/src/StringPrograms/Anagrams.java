@@ -6,12 +6,12 @@ public class Anagrams {
 	
 		
 		        String a = "listern";
-		        String t = "silent";
+		        String t = "silentr";
 
 		     // Check if lengths are different
 		        if (a.length() != t.length()) {
 		            System.out.println("The strings are not anagrams.");
-		            return;
+		          //  return;
 		        }
 
 		        // Sort the characters of both strings

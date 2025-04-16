@@ -13,7 +13,7 @@ public class MissingNumbers {
 			System.out.print( i + " " );
 		}
 		
-		System.out.println("\n\nMissing numbers : ");
+		System.out.println("\nMissing numbers : ");
 		
 		for(int i=arr[0];i<=arr[arr.length-1];i++) {
 			
