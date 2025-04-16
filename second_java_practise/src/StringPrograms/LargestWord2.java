@@ -35,7 +35,9 @@ public class LargestWord2 {
 			 
 			 secondlargest = input[i];
 		 }
-	 }System.out.println("Largest " + Largest + " - Length : " + Largest.length());
+	 }
+	 System.out.println("Largest " + Largest + " - Length : " + Largest.length());
+	 
 	 System.out.println("Secondlargest " + secondlargest + " - Length : " + secondlargest.length());
 	
 	 //smallest word

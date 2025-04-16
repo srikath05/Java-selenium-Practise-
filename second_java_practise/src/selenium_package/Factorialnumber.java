@@ -14,11 +14,11 @@ public class Factorialnumber {
 		
 		int f=1;
 		
-		for(int i=1;i<=n;i++)
+		for(int i=1;i<=10;i++)
 			f=f*i;
 		{
 			
-			System.out.println("Factorial of "+n+" is : " + f);
+			System.out.println("Factorial of  is : " + f);
 		}
 		
 		}

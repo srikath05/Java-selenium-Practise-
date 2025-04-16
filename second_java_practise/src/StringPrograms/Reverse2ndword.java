@@ -1,7 +1,5 @@
 package StringPrograms;
 
-import java.lang.reflect.Array;
-
 public class Reverse2ndword {
 	
 	public static void main(String[] args) {

@@ -20,7 +20,8 @@ public class ArrayStrings {
 	/* names = Arrays.copyOf(names, names.length + 1); // Increase size by 1
      names[names.length - 1] = "NewName"; // Add new element*/
 	
-	for(int i=0; i<=Names.length;i++) {		
+	for(int i=0; i<=Names.length;i++){		
+		
 	
 		String currentnames = Names[i];
 		//System.out.println(Names[i]);

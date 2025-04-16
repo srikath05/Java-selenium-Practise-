@@ -1,7 +1,5 @@
 package selenium_package;
 
-
-
 public class PatternProgram {
 
 	public static void main(String[] args) {
@@ -32,8 +30,10 @@ public class PatternProgram {
 		}
 	
 	System.out.println();
-	}System.out.println("pattern2");
 	
+	}
+	
+	System.out.println("pattern2");
 	
 	//pattern3
 	
@@ -47,10 +47,26 @@ public class PatternProgram {
         	
             System.out.print("* ");
         }
+        
         System.out.println(); // Move to the next line after each row
     
 	}System.out.println("pattern3");
 	
+	////////////////////////////////////
+	System.out.println("Pattern 4");
 	
+ for(int x=0;x<=6;x++) {
+		 
+		 for(int y=6;y>x;y--) {
+			 
+			System.out.print(" ");//one space
+		 }
+		 
+		 for(int y=0;y<=x;y++) {
+			 
+			 System.out.print("* ");
+		 }
+		 System.out.println();
+	 }
 
 }}

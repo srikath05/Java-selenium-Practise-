@@ -16,26 +16,31 @@ public class LargestWord {
 			 largest = Names[i];
 		 }
 	 }System.out.println(largest);
-	 
-	 
+	 	 
 	  //second and largest word	
+	 	 
+	// String[] input = {"Srikanth", "ganjiSriansh", "SriHamsiniganji"};
+	    String inputword = "my name is srikanth and my my name";
 	 
-	 
-	 String[] input = {"Srikanth", "ganjiSriansh", "SriHamsiniganji"};
-	 
+	 String[] input = inputword.split(" ");
 	 String Largest ="";
 	 String secondlargest = "";
 	 
 	 for(int i=0;i<input.length;i++) {
 		 
 		 if(input[i].length()>Largest.length()) {
+			 
 			 secondlargest = Largest;
+			 
 			 Largest = input[i];
+			 
 		 }else if(input[i].length()>secondlargest.length()&& input[i].length()<Largest.length()) {
 			 
 			 secondlargest = input[i];
 		 }
-	 }System.out.println("Largest " + Largest + " - Length : " + Largest.length());
+	 }
+	 System.out.println("Largest " + Largest + " - Length : " + Largest.length());
+	 
 	 System.out.println("Secondlargest " + secondlargest + " - Length : " + secondlargest.length());
 	
 	 //smallest word

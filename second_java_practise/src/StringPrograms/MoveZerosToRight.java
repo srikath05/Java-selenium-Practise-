@@ -9,7 +9,8 @@ public class MoveZerosToRight {
 		int[] arr = {1, 0, 30, 0, 2, 0, 4, 0 ,6};
 
         int index = 0; // Pointer for non-zero elements
-
+        
+        
         Arrays.sort(arr);
         System.out.println("sorting the array " + Arrays.toString(arr));
         // Traverse the array using a normal for loop
@@ -54,6 +55,7 @@ public class MoveZerosToRight {
         
 
     }
-	  }
-
-  
+	
+	
+	
+}

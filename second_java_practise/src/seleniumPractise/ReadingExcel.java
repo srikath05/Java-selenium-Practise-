@@ -4,11 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -51,7 +46,6 @@ public class ReadingExcel {
      wb.close();
      inputStream.close();
 		}
-		
 		public class ExcelUtil {
 			 
 			private static final String TEST_DATA_SHEET_PATH = "C:/Users/ganji/OneDrive/Desktop/2025/Emp Details.xlsx";
@@ -76,7 +70,7 @@ public class ReadingExcel {
 		return data;
 			}catch(Exception e) {
 				
-				System.out.println();
+				System.out.println(e.getMessage());
 			}
 				return data;}
 		}}

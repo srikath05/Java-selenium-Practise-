@@ -14,14 +14,16 @@ public class CharactersClarification {
 		        int specialCharCount = 0;
 		        String uppercase ="";
 		      
-		        for (int i = 0; i < input.length(); i++) {
-		            char ch = input.charAt(i);
+		     //   for (int i = 0; i < input.length(); i++) {
+		    //        char ch = input.charAt(i);
+		            
+		            for(char ch : input.toCharArray())
 
 		            if (Character.isUpperCase(ch)) {
-		            	//System.out.print( ch );
+		            	System.out.print( ch );
 		               uppercaseCount++;
 		              } else if (Character.isLowerCase(ch)) {
-		            	 
+		            	  System.out.print( ch );
 		                lowercaseCount++;
 		               
 		            } else if (Character.isDigit(ch)) {
@@ -31,14 +33,14 @@ public class CharactersClarification {
 		                specialCharCount++;
 		                
 		            }
-		        }
+		        
 		        
 		        System.out.println("Uppercase letters: " + uppercaseCount );
 		        System.out.println("Lowercase letters: " + lowercaseCount);
 		        System.out.println("Digits: " + digitCount);
 		        System.out.println("Special characters: " + specialCharCount);
 		    }
-	}
+}
 //Explanation
 //Character.isUpperCase(ch) checks if the character is uppercase.
 //Character.isLowerCase(ch) checks if the character is lowercase.

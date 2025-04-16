@@ -7,7 +7,7 @@ public class SumOfPrimenumbers {
 	        int sum = 0;   // Sum of primes
 	        
 	        // Loop through numbers to find primes
-	        for (int number = 2; count < 100; number++) {
+	        for (int number = 2; count < 10; number++) {
 	            boolean isPrime = true; // Assume number is prime
 	            
 	            // Check if the number is prime

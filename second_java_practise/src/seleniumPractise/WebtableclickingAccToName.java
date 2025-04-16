@@ -26,9 +26,13 @@ public class WebtableclickingAccToName {
 	            List<WebElement> rows = table.findElements(By.xpath("//table[@id='resultTable']//tr"));
 
 	            // Iterate through rows using a normal for loop
-	            for (int i = 0; i < rows.size(); i++) {
+	           /* for (int i = 0; i < rows.size(); i++) {
 	                // Get the current row
-	                WebElement row = rows.get(i);
+	                WebElement row = rows.get(i);*/
+	                
+	            // Iterate through rows using a normal for loop
+	            // Get the current row
+	                for(WebElement row : rows) {
 
 	                // Locate the name cell (1st column)
 	                WebElement nameCell = row.findElement(By.xpath("//table[@id='resultTable']//tr//td[2]"));

@@ -20,17 +20,17 @@ public class RemoveRepeatednumbers {
 
 	        // Traverse the array and print unique elements
 	       for (int i = 0; i < repetedNums.length; i++) {
-	            boolean isDuplicate = false;
+	            boolean isDuplicate = true;
 	            
 	            // Check if current element has appeared before
 	            for (int j = 0; j < i; j++) {
 	                if (repetedNums[i] == repetedNums[j]) {
-	                    isDuplicate = true;
+	                    isDuplicate = false;
 	                    break;
 	                }
 	            }
 	             // If it's not a duplicate, print it
-	            if (!isDuplicate) {
+	            if (isDuplicate) {
 	                System.out.print(repetedNums[i] + " ");
 	            }
 	        }

@@ -48,35 +48,24 @@ static WebDriver driver;
 		 * 
 		 * } driver.switchTo().window(windoehanle);
 		 */
+		String arr = " hi world hello hello everyone";
+	
+		String[] words = arr.split(" ");
 		
-	//	int[] arr = {20,30,40,50,60,10};
+	String target = "hello";
 		
-		String array = "hi srikanth how are you";
+		 int count = arr.split(target, -1).length - 1;
 		
-		String[] words = array.split(" ");
 		
-		/*
-		 * for(String word: words) {
-		 * 
-		 * 
-		 * 
-		 * result += Character.toUpperCase(word.charAt(0))+ word.substring(1) + " " ; }
-		 * 
-		 * System.out.println(result);
-		 */
-		
-		if(words.length>1) {
-			
-			String secwordrev = words[1];
-			String rev = "";
-			
-			for(int i = secwordrev.length()-1;i>=0;i--) {
-				
-				rev +=secwordrev.charAt(i);
-			}
-			words[1] = rev + " ";
-		}
-		System.out.println(String.join(" ", words));
+	System.out.println(target + " occurs : " + count);
+	
+		String text1 = " hi world hello hello everyone";
+		String text2 = text1.toLowerCase();
+		String substring = "hello";
+      
+      int counts = text2.split(substring, -1).length - 1;
+      
+      System.out.println("The substring '" + substring + " occurs " + counts + " times.");
 		
 	}
 	}

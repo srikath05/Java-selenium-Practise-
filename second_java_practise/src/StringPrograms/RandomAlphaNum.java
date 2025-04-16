@@ -10,7 +10,7 @@ public class RandomAlphaNum {
 		String reqstring = UUID.randomUUID().toString();
 	
 		//reqstring = reqstring.replace("-", "");
-		reqstring = reqstring.substring(0,8);
+		reqstring = reqstring.substring(0,6);
 		
 		System.out.println("String = " + reqstring );
 	}

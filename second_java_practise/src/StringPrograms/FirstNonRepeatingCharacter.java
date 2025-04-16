@@ -27,8 +27,10 @@ public class FirstNonRepeatingCharacter {
 
     System.out.print("Non-repeating characters1: ");
     
-    for (int j = 0; j< input1.length(); j++) {
-        char ch = input1.charAt(j);
+    for (int j = 0; j< input1.length(); j++){
+    char ch = input1.charAt(j);
+     
+         
         // Check if the character appears only once in the string
         if (input1.indexOf(ch) == input1.lastIndexOf(ch)&& input1.indexOf(ch)==j) {    //Non repeating characters
         	
@@ -45,8 +47,11 @@ public class FirstNonRepeatingCharacter {
 
     int SecondnonRepeating = 0;
 
-    for (int k = 0; k < input.length(); k++) {
-        char cc = input.charAt(k);
+	/*
+	 * for (int k = 0; k < input.length(); k++) { char cc = input.charAt(k);
+	 */
+        
+        for(char cc : input.toCharArray()) {
         // Check if the character appears only once in the string
         if (input.indexOf(cc) == input.lastIndexOf(cc)) {
         	SecondnonRepeating++; // Increment the count for non-repeating characters
@@ -69,17 +74,17 @@ public class FirstNonRepeatingCharacter {
 	int maxcount = 0;
 	String maxcharacter = "";
 	
-	for(String  ch : words) {
+	for(String  chh : words) {
 		
-		maxchar.put(ch , maxchar.getOrDefault(ch, 0)+1);
+		maxchar.put(chh , maxchar.getOrDefault(chh, 0)+1);
 		
-		if(maxchar.get(ch)>maxcount) {
+		if(maxchar.get(chh)>maxcount) {
 			
-			maxcount = maxchar.get(ch);
-			maxcharacter = ch;
+			maxcount = maxchar.get(chh);
+			maxcharacter = chh;
 		}
 	}
-	System.out.println(maxcharacter);
+	System.out.println("most repeated word : " + maxcharacter);
 	
 	/////////////////////////////     
 	
@@ -91,13 +96,13 @@ public class FirstNonRepeatingCharacter {
       char mostFrequentChar = ' ';
 
       // Count frequency of each character
-      for (char ch : input3.toCharArray()) {
-          charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+      for (char cha : input3.toCharArray()) {
+          charCountMap.put(cha, charCountMap.getOrDefault(cha, 0) + 1);
           
           // Update most frequent character if new max found
-          if (charCountMap.get(ch) > maxCount) {
-              maxCount = charCountMap.get(ch);
-              mostFrequentChar = ch;
+          if (charCountMap.get(cha) > maxCount) {
+              maxCount = charCountMap.get(cha);
+              mostFrequentChar = cha;
           }
       }
       System.out.println(mostFrequentChar);
@@ -122,8 +127,5 @@ public class FirstNonRepeatingCharacter {
 		}
 	}
     
-   }   
-
-	    
-}
-
+    	   }}	   
+	

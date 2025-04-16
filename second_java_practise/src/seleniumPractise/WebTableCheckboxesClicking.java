@@ -29,21 +29,21 @@ public class WebTableCheckboxesClicking {
 	
 		//List<WebElement> rows= driver.findElements(By.xpath("//table[@id='resultTable']//tr"));
 	
-		JavascriptExecutor js= (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1000)");
+		//JavascriptExecutor js= (JavascriptExecutor) driver;
+		//js.executeScript("window.scrollBy(0,1000)");
 		//System.out.println("headless success" + js.executeScript("window.scrollBy(0,1000)"));
-		
-		
+					
+		//for (int i = 0; i < checkboxes.size(); i++) {
+		//WebElement checkbox = checkboxes.get(i);
 			
-		for (int i = 0; i < checkboxes.size(); i++) {
-			WebElement checkbox = checkboxes.get(i);
+			for(WebElement checkbox : checkboxes) {
 			if (!checkbox.isSelected()) {
 				checkbox.click();
 				
 				Thread.sleep(3000);
-				System.out.println("Checkbox " + (i + 1) + " clicked.");
+				System.out.println("Checkbox " + checkbox + " clicked.");
 				} else {
-				System.out.println("Checkbox " + (i + 1) + " is already selected.");
+				System.out.println("Checkbox " + checkbox + "  is already selected.");
 			}
 		}
  

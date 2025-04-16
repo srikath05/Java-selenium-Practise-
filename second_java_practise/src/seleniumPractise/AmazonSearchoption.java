@@ -40,8 +40,8 @@ public class AmazonSearchoption {
 		        // Find all product names and prices on the first page
 		        List<WebElement> productNames = driver.findElements(By.cssSelector("span.a-size-medium.a-color-base.a-text-normal"));
 		        List<WebElement> productPrices = driver.findElements(By.cssSelector("span.a-price-whole"));
-
-		        // Print product name and price
+		        
+		         // Print product name and price
 		        for (int i = 0; i < productNames.size(); i++) 
 		          {
 		            String name = productNames.get(i).getText();

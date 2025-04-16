@@ -1,62 +1,69 @@
 package StringPrograms;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.text.SimpleDateFormat;
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
-import java.util.logging.FileHandler;
-import org.apache.commons.collections4.bag.SynchronizedSortedBag;
-import org.apache.commons.io.FileUtils;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class sample {
  
+
  public static void main(String[] args) {
-	 
-	 
-	
-	 
- }
+  
+     String s = "The amazon code=1234 is dispatched on june 5678ui";
+     
+     String words = s.replaceAll("[^0-9]","");
+     
+     System.out.println(words);
+     
+     String number = "";
+     String code = "";
+     
+     for(char word :s.toCharArray()) {
+    	 
+    	 if(Character.isDigit(word)) {
+    		 
+    		 System.out.print(word);
+    	 }
+     }
+          
+     Map<Integer, String> map = new HashMap<>();
+     
+     map.put(1, "Ram");
+     map.put(2, "raju");
+     map.put(3, "Sita");
+     map.put(4, "hamsi");
+     
+     for(int key : map.keySet()) {
+    	 
+    	 System.out.println(key + map.get(key));
+        }
+     
+     
+     int keyToFind = 2;
+     String value = map.get(keyToFind);
+
+     if (value != null) {
+         System.out.println("Value for key " + keyToFind + " is: " + value);
+     } else {
+         System.out.println("Key " + keyToFind + " not found in the map.");
+     }
  
-}
-	
+ 
+     
+     String valueToFind = "raju";
 
-	
-	
-		
+     for (Map.Entry<Integer, String> entry : map.entrySet()) {
+         if (entry.getValue().equals(valueToFind)) {
+             System.out.println("Key for value '" + valueToFind + "' is: " + entry.getKey());
+         }
+     }
+     
+   }
+ }
+     
+ 	
 
-	
 
-			
-
+ 
